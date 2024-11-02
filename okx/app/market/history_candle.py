@@ -169,6 +169,8 @@ class HistoryCandle(MarketBase):
             # [BREAK] 完成
             if before_ts > end_ts:
                 break
+
+            time.sleep(0.1)
         # 转换为candle
         result = self.__candle_list_to_candle(
             instId=instId,
